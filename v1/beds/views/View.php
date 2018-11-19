@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Clase base para la representación de las views
+ * interface for the representation of views
  */
 interface View
 {
