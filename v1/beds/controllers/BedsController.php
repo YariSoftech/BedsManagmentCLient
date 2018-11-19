@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Controlador de los Productos
+ * Controller of the beds
  */
 
 require_once 'Controller.php';
@@ -9,13 +9,13 @@ require_once 'http/response.php';
 require_once 'http/status_messages.php';
 
 
-class ProductsController implements Controller {
+class BedsController implements Controller {
 
-    private $productsRepository;
+    private $bedsRepository;
 
 
-    public function __construct($productsRepository) {
-        $this->productsRepository = $productsRepository;
+    public function __construct($bedsRepository) {
+        $this->bedsRepository = $bedsRepository;
     }
 
 
@@ -28,7 +28,7 @@ class ProductsController implements Controller {
 
         } else {
 
-            $results = $this->productsRepository->getAllProducts();
+            $results = $this->bedsRepository->getAllBeds();
 
             if (is_array($results)) {
                 $response->setBody($results);
